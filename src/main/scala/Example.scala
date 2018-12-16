@@ -47,7 +47,7 @@ object Example {
   def boxes(count: Int): Image = {
 		val aBox = Image.rectangle(40,40).fillColor(Color.royalBlue)
 
-		def loop(count: Int) =
+		def loop(count: Int): Image =
 		count match {
 			case 0 => Image.empty
 			case n => aBox.beside(loop(n-1))
